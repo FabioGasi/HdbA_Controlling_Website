@@ -1,25 +1,33 @@
-import React from 'react';
-import Typed from 'typed.js';
+import React from "react";
+import Typed from "typed.js";
 
-function MyComponent() {
-  // Create reference to store the DOM element containing the animation
+function TypingAnimation() {
   const el = React.useRef(null);
 
   React.useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ['<i>First</i> sentence.', '&amp; a second sentence.'],
+      strings: [
+        "Green Controlling sind mehr als <span class='highlight'>Zahlen</span>",
+        "Green Controlling ist mehr als <span class='highlight'>Nachhaltigkeit</span>",
+        "Green Controlling ist <span class='highlight'>Zukunft</span>",
+      ],
       typeSpeed: 50,
+      backSpeed: 30,
+      loop: true,
+      cursorChar: "|",
+      contentType: "html",
     });
 
     return () => {
-      // Destroy Typed instance during cleanup to stop animation
       typed.destroy();
     };
   }, []);
 
   return (
-    <div className="App">
-      <span ref={el} />
+    <div className="typing-animation">
+      <h1 ref={el} />
     </div>
   );
 }
+
+export default TypingAnimation;
