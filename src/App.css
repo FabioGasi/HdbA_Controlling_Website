@@ -216,28 +216,177 @@ code {
 }
 
 /*================== responsive design ==================*/
-@media (max-width: 768px) {
-  .fact-section .main-fact {
-    font-size: 2rem;
+@media screen and (max-width: 768px) {
+  /* Verbesserte Container-Struktur */
+  .container {
+    padding: 0 15px;
+    overflow-x: hidden;
   }
 
-  .typing-animation h1 {
-    font-size: 2rem;
+  /* Navigation Anpassungen */
+  .navbar {
+    padding: 10px 0;
+  }
+
+  .navbar-collapse {
+    background: rgba(33, 37, 41, 0.98);
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  .nav-link {
+    padding: 12px 15px !important;
+    margin: 5px 0;
+    text-align: center;
+  }
+
+  /* Sektion Anpassungen */
+  .introduction,
+  #general-facts,
+  .main-footer {
+    height: auto;
+    min-height: 100vh;
+    padding: 80px 0 40px 0;
+  }
+
+  /* Fact Section Anpassungen */
+  .fact-section {
+    padding: 60px 0;
+    margin: 0;
+  }
+
+  .fact-section .main-fact {
+    font-size: 24px;
+    padding: 0 10px;
+    margin-bottom: 30px;
+    word-wrap: break-word;
+  }
+
+  /* Card Anpassungen */
+  .card {
+    margin-bottom: 20px;
+    height: auto !important;
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+
+  .card-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .card-text {
+    font-size: 14px;
+  }
+
+  /* Bild Container Anpassungen */
+  .facts-image-container,
+  .concept-image-container {
+    height: auto;
+    max-height: 200px;
+    margin: 20px 100px;
+    width:50%;
+  }
+
+  .facts-image,
+  .concept-image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Calculator Section Anpassungen */
+  .calculator-section {
+    height: auto;
+    min-height: 100vh;
+    position: relative;
+    padding: 60px 0;
+  }
+
+  .calculator-title-container {
+    padding: 20px 15px;
   }
 
   .calculator-title-container h2 {
-    font-size: 2.5rem;
-    padding: 1rem;
+    font-size: 24px;
+    padding: 10px;
   }
 
-  .facts-image-container,
-  .concept-image-container {
-    height: 200px;
-  }
-
+  /* Button Anpassungen */
   .download-button {
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
+    width: 100%;
+    max-width: 280px;
+    margin: 20px auto;
+    padding: 12px 20px;
+    font-size: 14px;
+    white-space: normal;
+    height: auto;
+  }
+
+  /* Footer Anpassungen */
+  .main-footer {
+    padding: 40px 0 20px 0;
+  }
+
+  .footer-links {
+    margin-bottom: 30px;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
+  }
+
+  /* Row und Column Anpassungen */
+  .row {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  [class*="col-"] {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* Zusätzliche Anpassungen für sehr kleine Bildschirme */
+@media screen and (max-width: 480px) {
+  .typing-animation h1 {
+    font-size: 20px;
+    padding: 0 10px;
+    margin: 20px 0;
+  }
+
+  .main-fact {
+    font-size: 22px;
+  }
+
+  .navbar-brand img {
+    width: 28px;
+  }
+
+  .card-title {
+    font-size: 16px;
+  }
+
+  .card-text {
+    font-size: 13px;
+  }
+
+  .footer-links li a,
+  .footer-text {
+    font-size: 14px;
+  }
+}
+
+/* Verbesserte Touch-Interaktionen */
+@media (hover: none) {
+  .nav-link:hover::after,
+  .card:hover,
+  .download-button:hover,
+  .facts-image:hover,
+  .concept-image:hover {
+    transform: none;
   }
 }
 
